@@ -10,6 +10,8 @@ from aws_cdk import (
 # So here we are essentially importing a custom construct to deploy a resource in an opinionated way
 from .hitcounter import HitCounter
 
+from cdk_dynamo_table_viewer import TableViewer
+
 # As you can see, the class constructors of both CdkworkshopStack and lambda Function (and many other classes in the CDK) have the signature (scope, id, **kwargs). 
 # This is because all of these classes are constructs. Constructs are the basic building block of CDK apps. 
 # They represent abstract “cloud components” which can be composed together into higher level abstractions via scopes. 
@@ -55,4 +57,11 @@ class CdkworkshopStack(core.Stack):
         apigw.LambdaRestApi(
             self, 'Endpoint',
             handler=hello_with_counter.handler,
+        )
+
+        TableViewer(
+            self, 'ViewHitCounter',
+            title='Hello Hits',
+            sort_by='-hits',
+            table=hello_with_counter.table,
         )

@@ -39,10 +39,14 @@ pip3 install --upgrade pip
  * `pip install --upgrade pip` upgrade pip
  * `pip install -r requirements.txt`install all package requirements from the txt file
 
+# Installing a 3rd party library from pypi
+* Is the library on pypi? [Yes](https://pypi.org/project/cdk-dynamo-table-viewer/)
+* How do i install it? ```pip install cdk-dynamo-table-viewer```
 
 # Terminology CDK
 constructs (CDK)
 interface
+Look into what a public property is. (See "TODO PublicProperty" in codebase)
 
 # Terminology Python
 class, object, self, '__init__' = https://micropyramid.com/blog/understand-self-and-__init__-method-in-python-class/
