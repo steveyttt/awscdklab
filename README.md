@@ -11,6 +11,7 @@ https://github.com/jorgebastida/awslogs (Python cli based log parsing tool for c
 
 # Python specifics
 Virtual Envs - https://docs.python.org/3/tutorial/venv.html
+setup.py - https://stackoverflow.com/questions/1471994/what-is-setup-py
 
 # Commands setup
 npm install -g aws-cdk
@@ -31,16 +32,17 @@ pip3 install --upgrade pip
  * `pip install aws-cdk.aws_apigateway` Install a new construct library (Needed for each AWS service used)
  * `pip install aws-cdk.aws_dynamodb` Install a new construct library (Needed for each AWS service used)
 
-# Commands python
- * `python3 -m venv .venv` Manually create a virtual env (CDK init does this for you though)
+# Commands to get started - python
+ * One time command per project - `python3 -m venv .venv` Manually create a virtual env (CDK init does this for you though)
  * `source .venv/bin/activate` activate your virtual env
  * 'deactivate' leave your virtual env
  * `pip install --upgrade pip` upgrade pip
- * `pip install -r requirements.txt`install all packahe requirements from the txt file
+ * `pip install -r requirements.txt`install all package requirements from the txt file
 
 
 # Terminology CDK
 constructs (CDK)
+interface
 
 # Terminology Python
 class, object, self, '__init__' = https://micropyramid.com/blog/understand-self-and-__init__-method-in-python-class/

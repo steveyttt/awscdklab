@@ -6,10 +6,12 @@
 
 from aws_cdk import core
 
+#From local directory cdkworkshop and file cdkworkshop_stack.py import class CdkworkshopStack
 from cdkworkshop.cdkworkshop_stack import CdkworkshopStack
 
-
 app = core.App()
+
+#deploy a stack called cdk workshop
 CdkworkshopStack(app, "cdkworkshop")
 
 app.synth()
